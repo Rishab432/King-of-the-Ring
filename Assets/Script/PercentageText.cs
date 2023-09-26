@@ -9,8 +9,8 @@ public class PercentageText : MonoBehaviour
 
     void Update()
     {
-        _p1_title.text = Attack1.health1.ToString();
-        _p2_title.text = Attack2.health2.ToString();
+        _p1_title.text = Attack1.Instance.knockback1.ToString() + "%";
+        _p2_title.text = Attack2.Instance.knockback2.ToString() + "%";
 
     }
 }

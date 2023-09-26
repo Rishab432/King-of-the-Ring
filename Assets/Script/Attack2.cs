@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class Attack2 : MonoBehaviour
 {
+    public static Attack2 Instance;
     private float cooldown;
     public float timeBtwAttack2 = 0.5f;
 
@@ -12,11 +13,25 @@ public class Attack2 : MonoBehaviour
     public LayerMask whatIsEnemies2;
     public float attackRange2 = 1;
     public static int health2 = 1;
+    public int knockback2 = health2;
     public int damage2 = 1;
 
 
 
-    public UnityEvent<GameObject> OnHit, OnDeath;
+    public UnityEvent<GameObject> OnHit;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Update()
     {
@@ -44,14 +59,11 @@ public class Attack2 : MonoBehaviour
     public void Takedamage2(int damage1, GameObject sender)
     {
         health2 += damage1;
+        knockback2 = health2;
         KnockbackFeedback.strength = health2;
         if (health2 > 0)
         {
             OnHit?.Invoke(sender);
-        }
-        else
-        {
-            OnDeath?.Invoke(sender);
         }
     }
 }

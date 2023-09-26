@@ -372,8 +372,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4362340cdcf28964e996b0f31cb28b70, type: 2}
+  m_sharedMaterial: {fileID: -4812418902574549262, guid: 4362340cdcf28964e996b0f31cb28b70, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1451,6 +1451,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   attackRange1: 1
+  knockback1: 1
   damage1: 1
   OnHit:
     m_PersistentCalls:
@@ -1467,9 +1468,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &947106828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1686,6 +1684,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackRange2: 1
+  knockback2: 4
   damage2: 1
   OnHit:
     m_PersistentCalls:
@@ -1702,9 +1701,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &947339552
 Transform:
   m_ObjectHideFlags: 0
@@ -3093,8 +3089,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4362340cdcf28964e996b0f31cb28b70, type: 2}
+  m_sharedMaterial: {fileID: -4812418902574549262, guid: 4362340cdcf28964e996b0f31cb28b70, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
