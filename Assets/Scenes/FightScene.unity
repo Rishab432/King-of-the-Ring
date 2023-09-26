@@ -1451,7 +1451,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   attackRange1: 1
-  damage1: 3
+  damage1: 1
   OnHit:
     m_PersistentCalls:
       m_Calls:
@@ -1686,7 +1686,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackRange2: 1
-  damage2: 3
+  damage2: 1
   OnHit:
     m_PersistentCalls:
       m_Calls:
