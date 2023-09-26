@@ -26,6 +26,6 @@ public class Countdown : MonoBehaviour
         _countdown_title.text = "";
         PauseMenu.Instance.pauseButton.SetActive(true);
         gameStart = true;
-        Destroy(_countdown_title);
+        _countdown_title.SetActive(false);
     }
 }
