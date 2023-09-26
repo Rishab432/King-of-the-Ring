@@ -15,14 +15,16 @@ public class Countdown : MonoBehaviour
 
     private IEnumerator readySetGoTimer(float wait)
     {
+        PauseMenu.Instance.pauseButton.SetActive(false);
         gameStart = false;
         _countdown_title.text = "Ready";
         yield return new WaitForSeconds(wait);
         _countdown_title.text = "Set";
         yield return new WaitForSeconds(wait);
-        _countdown_title.text = "Go";
+        _countdown_title.text = "Go!";
         yield return new WaitForSeconds(wait);
         _countdown_title.text = "";
+        PauseMenu.Instance.pauseButton.SetActive(true);
         gameStart = true;
         Destroy(_countdown_title);
     }
