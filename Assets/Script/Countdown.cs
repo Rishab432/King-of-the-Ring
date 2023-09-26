@@ -24,5 +24,6 @@ public class Countdown : MonoBehaviour
         yield return new WaitForSeconds(wait);
         _countdown_title.text = "";
         gameStart = true;
+        Destroy(_countdown_title);
     }
 }
