@@ -16,7 +16,7 @@ public class Attack2 : MonoBehaviour
     public int knockback2 = health2;
     public int damage2 = 1;
 
-
+    public Animator animator;
 
     public UnityEvent<GameObject> OnHit;
 
@@ -46,6 +46,8 @@ public class Attack2 : MonoBehaviour
                 Collider2D[] enemiesTodamage2 = Physics2D.OverlapCircleAll(attackPos2.position, attackRange2, whatIsEnemies2);
                 enemiesTodamage2[0].GetComponent<Attack1>().Takedamage1(damage2, transform.gameObject);
 
+                animator.SetBool("IsPunching", true);
+
                 cooldown = timeBtwAttack2;
             }
 
@@ -54,6 +56,7 @@ public class Attack2 : MonoBehaviour
         else
         {
             cooldown -= Time.deltaTime;
+            animator.SetBool("IsPunching", false);
         }
     }
     public void Takedamage2(int damage1, GameObject sender)
