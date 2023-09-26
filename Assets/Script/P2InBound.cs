@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class P1InBound : MonoBehaviour
+public class P2InBound : MonoBehaviour
 {
     [SerializeField] private CircleCollider2D _ring;
 
@@ -11,8 +11,9 @@ public class P1InBound : MonoBehaviour
         if (collision.gameObject.name == "Ring Area")
         {
 
-            WinScreens.Instance.p2Win = true;
+            WinScreens.Instance.p1Win = true;
             WinScreens.Instance.GameFinished();
+
 
         }
     }

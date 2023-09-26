@@ -1546,6 +1546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 947339552}
   - component: {fileID: 947339551}
+  - component: {fileID: 947339554}
   - component: {fileID: 947339550}
   - component: {fileID: 947339549}
   - component: {fileID: 947339548}
@@ -1778,6 +1779,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &947339554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947339545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e4e83b80e294070baf89d7425f6086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ring: {fileID: 1996694538}
 --- !u!1 &1009005257
 GameObject:
   m_ObjectHideFlags: 0
@@ -3160,9 +3174,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.02881813}
   serializedVersion: 2
-  m_Radius: 4.8
+  m_Radius: 4.9440928
 --- !u!4 &1996694539
 Transform:
   m_ObjectHideFlags: 0
