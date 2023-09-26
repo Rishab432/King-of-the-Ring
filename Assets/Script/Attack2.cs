@@ -12,7 +12,7 @@ public class Attack2 : MonoBehaviour
     public LayerMask whatIsEnemies2;
     public float attackRange2 = 1;
     public static int health2 = 1;
-    public int damage2 = 3;
+    public int damage2 = 1;
 
 
 
