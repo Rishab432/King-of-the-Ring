@@ -8,6 +8,6 @@ public class PlayerInBounds : MonoBehaviour
 
     void OnCollisionExit(Collision _ring)
     {
-        Debug.Log("p2 wins");
+        WinScreens.Instance.p2Win = true;
     }
 }
