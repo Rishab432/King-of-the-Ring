@@ -24,30 +24,9 @@ public class PauseMenu : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    //void Start()
-    //{
-    //    pauseMenu.SetActive(false);
-    //}
-
-    void OnEnable()
+    void Start()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        Debug.Log("Scene Loaded" + scene.name);
-        if (scene.name == "FightScene")
-        {
-            Debug.Log("pause menu loaded");
-            pauseMenu.SetActive(false);
-            isPaused = false;
-        }
-    }
-
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        pauseMenu.SetActive(false);
     }
 
     public void PauseGame()
@@ -68,7 +47,10 @@ public class PauseMenu : MonoBehaviour
 
     public void toMainMenu()
     {
+        pauseMenu.SetActive(false);
+        pauseButton.SetActive(true);
         Time.timeScale = 1f;
+        isPaused = false;
         SceneManager.LoadScene(0);
     }
 

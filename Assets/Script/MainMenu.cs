@@ -15,17 +15,17 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("FightScene");
+        SceneManager.LoadScene(2);
     }
     
     public void ToSettingsMenu()
     {
-        SceneManger.LoadScene("SettingsMenu");
+        SceneManager.LoadScene(1);
     }
     
     public void ToMainMenu()
     {
-        SceneManger.LoadScene("MainMenu");
+        SceneManager.LoadScene(0);
     }
     
     public void QuitGame()

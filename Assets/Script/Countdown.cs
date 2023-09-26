@@ -1,46 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Countdown : MonoBehaviour
 {
-    public static Countdown Instance;
     [SerializeField] private TMP_Text _countdown_title;
     public static bool gameStart;
-
-    void Awake()
+    
+    void Start()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        Debug.Log("Scene Loaded" + scene.name);
-        if (scene.name == "FightScene")
-        {
-            Debug.Log("this scene has been loaded");
-            StartCoroutine(readySetGoTimer(1));
-        }
-    }
-
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        StartCoroutine(readySetGoTimer(1));
     }
 
     private IEnumerator readySetGoTimer(float wait)
@@ -56,5 +26,6 @@ public class Countdown : MonoBehaviour
         _countdown_title.text = "";
         PauseMenu.Instance.pauseButton.SetActive(true);
         gameStart = true;
+        Destroy(_countdown_title);
     }
 }
