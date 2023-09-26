@@ -7,6 +7,8 @@ public class WinScreens: MonoBehaviour
 {
     public static WinScreens Instance;
     public GameObject p1WinMenu, p2WinMenu;
+    public bool p1Win = false;
+    public bool p2Win = false;
 
     void Awake()
     {
@@ -29,11 +31,11 @@ public class WinScreens: MonoBehaviour
 
     public void GameFinished()
     {
-        if (true)
+        if (p1Win)
         {
             p1WinMenu.SetActive(true);
         }
-        else if (true)
+        else if (p2Win)
         {
             p2WinMenu.SetActive(true);
         }
